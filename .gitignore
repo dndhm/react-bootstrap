@@ -1,0 +1,6 @@
+.DS_Store
+.sublime-project
+node_modules
+/react-bootstrap.sublime-project
+/react-bootstrap.sublime-workspace
+build
