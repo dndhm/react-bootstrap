@@ -30,6 +30,7 @@
     "jest": "20.0.4",
     "object-assign": "4.1.1",
     "promise": "8.0.1",
+    "prop-types": "^15.6.0",
     "raf": "3.4.0",
     "react": "^16.1.1",
     "react-dev-utils": "^4.2.1",
@@ -53,7 +54,8 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "enzyme-react-16-adapter-setup"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
@@ -85,5 +87,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "enzyme-react-16-adapter-setup": "^0.1.0"
   }
 }
