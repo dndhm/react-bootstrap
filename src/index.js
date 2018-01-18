@@ -11,10 +11,12 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 const initialState = {
+	// route: {
+	// 	heading: 'Default route',
+	// 	page: 'dashboard',
+	// },
 	values: {
-		key: {
-			to: 'default value',
-		},
+		email: 'default value',
 	},
 };
 

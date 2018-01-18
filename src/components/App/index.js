@@ -1,21 +1,20 @@
-import get from 'lodash/fp/get';
-import React from 'react';
 import propTypes from 'prop-types';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as actions from '../../redux/actions';
+
+import Page from '../Page';
 
 const mapDispatchToProps = dispatch => ({ actions: bindActionCreators(actions, dispatch) });
 
 export const mapStateToProps = ({ values }) => ({ values });
 
 const App = props => {
-	const { values, actions } = props;
+	const { actions, values } = props;
 
-	const value = get(['key', 'to'], values);
-
-	return (<h1 onClick={() => actions.change(['key', 'to'], 'new value')}>App heading: {value}</h1>);
+	return (<Page actions={actions} values={values} />);
 };
 
 App.propTypes = {
